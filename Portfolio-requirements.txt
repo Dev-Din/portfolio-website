@@ -1,0 +1,113 @@
+You are an expert React developer and UI/UX designer. Your task is to generate a complete React portfolio project with the following specifications:
+
+
+ ✅ Project Overview
+
+ Build a Single Page Application (SPA) using React with Vite as the build tool.
+ Apply Bootstrap CSS globally for styling.
+ Integrate Web3Forms API for the contact form.
+
+---
+
+ ✅ Core Requirements
+
+1. Framework & Styling
+
+    Use React functional components and hooks.
+    Configure Bootstrap globally for consistent design.
+    Ensure a modern and responsive UI.
+
+2. Navigation Bar
+
+    Fixed at the top using Bootstrap’s Navbar component.
+    Include links: Home, About, Projects, Skills, Contact.
+    Implement smooth scrolling for section navigation.
+    Add the provided logo (`ICON.png`) on the left side.
+
+3. Sections
+
+    Home: Full-screen hero section with name, tagline, and a call-to-action button.
+    About: Short bio and key highlights.
+    Projects: Responsive grid of Bootstrap cards displaying projects with:
+
+      Image
+      Title
+      Short description
+      Buttons for Live Demo and GitHub
+    Skills: Display skills using Bootstrap badges or icons in a responsive grid.
+    Contact: Form integrated with Web3Forms API (API Key: e6673098-06de-488f-a3e3-138232eb392d), including:
+
+      Name, Email, and Message fields
+      Submit button
+      Success and error handling with Bootstrap alerts
+
+4. Features
+
+    Smooth scrolling navigation.
+    Fully responsive for desktop, tablet, and mobile.
+    Social media icons (GitHub, LinkedIn, Twitter) in the footer.
+    Optional: Dark mode toggle.
+
+5. Tech Specs
+
+    Use Vite for setup and build.
+    Apply Bootstrap globally.
+    Integrate Web3Forms API for contact form submission.
+
+---
+
+ ✅ Deliverables
+
+ A complete React (Vite) project with:
+
+   Global Bootstrap styling
+   Navigation bar with smooth scroll
+   Home, About, Projects, Skills, Contact sections
+   Contact form integrated with Web3Forms API
+   Responsive layout and modern UI design
+
+---
+
+Generate the full project code including:
+
+ `main.jsx` and `App.jsx`
+ Separate components for Navbar, Home, About, Projects, Skills, Contact, Footer
+ All necessary imports for Bootstrap and smooth scrolling
+ A clean folder structure with best practices
+
+---
+
+🔥 Important: Do not include installation commands. Focus on generating the full React Vite project code with all components and functionality as described.
+
+
+my-portfolio/
+│
+├── index.html
+├── package.json
+├── vite.config.js
+│
+└── src/
+    ├── main.jsx                # Entry point, imports Bootstrap globally
+    ├── App.jsx                 # Main app layout, includes all sections
+    │
+    ├── assets/
+    │   └── ProfilePhoto.png            # Logo for navbar
+    │
+    ├── components/
+    │   ├── Navbar.jsx          # Navigation bar with smooth scroll
+    │   ├── Home.jsx            # Hero section
+    │   ├── About.jsx           # About section
+    │   ├── Projects.jsx        # Projects section (Bootstrap cards)
+    │   ├── Skills.jsx          # Skills section (Bootstrap badges/icons)
+    │   ├── Contact.jsx         # Contact form with Web3Forms API integration
+    │   └── Footer.jsx          # Footer with social links
+    │
+    ├── styles/
+    │   └── custom.css          # Additional custom styles if needed
+    │
+    └── utils/
+        └── scroll.js           # Helper for smooth scrolling (if needed)
+
+
+
+

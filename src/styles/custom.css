@@ -1,0 +1,357 @@
+/* Custom CSS for portfolio */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Justify all text */
+body,
+p,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: justify;
+}
+
+/* Custom navbar styling */
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+
+/* Hero section styling */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* Hero image styling */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 450px;
+  max-height: 450px;
+}
+
+.hero-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Mobile specific height adjustments */
+@media (max-width: 768px) {
+  .hero-image {
+    max-height: 900px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-image {
+    max-height: 800px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    max-height: 700px !important;
+  }
+}
+
+/* Section padding */
+.section {
+  padding: 80px 0;
+}
+
+/* Striped sections - alternating backgrounds */
+main .section:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+main .section:nth-child(even) {
+  background-color: white;
+}
+
+/* Ensure smooth transitions between sections */
+.section {
+  transition: background-color 0.3s ease;
+}
+
+/* Override hero section gradient for striped pattern */
+.hero-section {
+  background: whitesmoke !important;
+  color: #333 !important;
+}
+
+/* Ensure text is visible on light backgrounds */
+.hero-section h1,
+.hero-section h2,
+.hero-section p {
+  color: #333 !important;
+}
+
+.hero-section .btn-outline-light {
+  color: #333 !important;
+  border-color: #333 !important;
+}
+
+.hero-section .btn-outline-light:hover {
+  background-color: #333 !important;
+  color: white !important;
+}
+
+/* Footer should have dark background */
+.footer {
+  background-color: #343a40 !important;
+}
+
+/* Project cards hover effects */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills section styling */
+.skill-badge {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+}
+
+/* Contact form styling */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 40px 0;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+/* Dark mode styles (optional) */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-mode .navbar {
+  background-color: #1e1e1e !important;
+}
+
+/* Custom button styles */
+.btn-primary-custom {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section .hero-image {
+    width: 250px !important;
+    height: 333px !important;
+  }
+
+  .hero-image img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .hero-image {
+    width: 200px !important;
+    height: 267px !important;
+  }
+
+  .hero-image img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.5rem !important;
+    margin-right: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-section .hero-image {
+    width: 90vw !important;
+    max-width: 560px !important;
+    height: auto !important;
+    aspect-ratio: 4/3;
+    margin-top: 2rem;
+  }
+
+  .hero-image img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem !important;
+    margin-right: 1rem !important;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1rem;
+  }
+
+  .hero-section .hero-image {
+    width: 85vw !important;
+    max-width: 500px !important;
+    height: auto !important;
+    aspect-ratio: 4/3;
+  }
+
+  .hero-image img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .display-5 {
+    font-size: 1.5rem;
+  }
+
+  .lead {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section .hero-image {
+    width: 80vw !important;
+    max-width: 400px !important;
+    height: auto !important;
+    aspect-ratio: 4/3;
+  }
+
+  .hero-image img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem !important;
+    margin-right: 0.3rem !important;
+  }
+
+  .section {
+    padding: 30px 0;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
