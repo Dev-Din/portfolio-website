@@ -184,5 +184,5 @@ This project is open source and available under the [MIT License](LICENSE).
 Feel free to reach out if you have any questions or suggestions!
 
 - Email: nurdin.abdinasir@example.com
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/username)
-- GitHub: [Your GitHub](https://github.com/username)
+- LinkedIn: [Your LinkedIn](https://ke.linkedin.com/in/nurdin-abdinasir-1b1a9b367)
+- GitHub: [Your GitHub](https://github.com/hajonurdin)
