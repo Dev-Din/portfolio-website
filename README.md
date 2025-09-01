@@ -183,6 +183,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 Feel free to reach out if you have any questions or suggestions!
 
-- Email: nurdin.abdinasir@example.com
+- Email: nurudiin222@gmail.com
 - LinkedIn: [@Nurdin Abdinasir](https://ke.linkedin.com/in/nurdin-abdinasir-1b1a9b367)
 - GitHub: [@Dev-Din](https://github.com/Dev-Din)
