@@ -196,6 +196,7 @@ const Contact = () => {
                 <a
                   href="mailto:Nurudiin222@gmail.com"
                   className="text-decoration-none"
+                  style={{ color: "var(--link-color)" }}
                 >
                   Nurudiin222@gmail.com
                 </a>
@@ -212,6 +213,7 @@ const Contact = () => {
               <a
                 href="https://maps.app.goo.gl/995ZxDrZiq6sxY7c9"
                 className="text-decoration-none"
+                style={{ color: "var(--link-color)" }}
               >
                 Kijabe Street, Nairobi, Kenya
               </a>

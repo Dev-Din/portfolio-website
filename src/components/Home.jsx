@@ -97,7 +97,11 @@ const Home = () => {
       >
         <i
           className="bi bi-chevron-down"
-          style={{ fontSize: "2rem", cursor: "pointer", color: "#333" }}
+          style={{
+            fontSize: "2rem",
+            cursor: "pointer",
+            color: "var(--text-primary)",
+          }}
           onClick={() => {
             const element = document.getElementById("about");
             if (element) {

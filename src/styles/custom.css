@@ -1,8 +1,93 @@
 /* Custom CSS for portfolio */
 
+/* CSS Variables for Theme Switching */
+:root {
+  /* Brand color - remains same in all themes */
+  --brand-color: #16234d;
+
+  /* Light Theme (Default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #f8f9fa;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+  --navbar-text: #333333;
+  --footer-bg: #343a40;
+  --footer-text: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --hover-bg: #f8f9fa;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --badge-bg: #6c757d;
+  --badge-text: #ffffff;
+  --progress-bg: #e9ecef;
+  --progress-bar-bg: #007bff;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2d2d2d;
+  --text-primary: #f5f5f5;
+  --text-secondary: #cccccc;
+  --text-muted: #999999;
+  --border-color: #404040;
+  --card-bg: #1e1e1e;
+  --navbar-bg: rgba(30, 30, 30, 0.8);
+  --navbar-text: #f5f5f5;
+  --footer-bg: #1e1e1e;
+  --footer-text: #f5f5f5;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --hover-bg: #2d2d2d;
+  --link-color: #4dabf7;
+  --link-hover-color: #74c0fc;
+  --badge-bg: #495057;
+  --badge-text: #f8f9fa;
+  --progress-bg: #495057;
+  --progress-bar-bg: #4dabf7;
+}
+
+/* System Theme (follows OS preference) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-tertiary: #2d2d2d;
+    --text-primary: #f5f5f5;
+    --text-secondary: #cccccc;
+    --text-muted: #999999;
+    --border-color: #404040;
+    --card-bg: #1e1e1e;
+    --navbar-bg: rgba(30, 30, 30, 0.8);
+    --navbar-text: #f5f5f5;
+    --footer-bg: #1e1e1e;
+    --footer-text: #f5f5f5;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --hover-bg: #2d2d2d;
+    --link-color: #4dabf7;
+    --link-hover-color: #74c0fc;
+    --badge-bg: #495057;
+    --badge-text: #f8f9fa;
+    --progress-bg: #495057;
+    --progress-bar-bg: #4dabf7;
+  }
+}
+
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
+}
+
+/* Apply theme variables to body */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Justify all text */
@@ -17,6 +102,107 @@ h4,
 h5,
 h6 {
   text-align: justify;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+/* Override Bootstrap text classes to use theme variables */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-primary {
+  color: var(--brand-color) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.text-dark {
+  color: var(--text-primary) !important;
+}
+
+.text-light {
+  color: var(--text-primary) !important;
+}
+
+/* Override Bootstrap link colors */
+a {
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Override Bootstrap badge colors */
+.badge {
+  background-color: var(--badge-bg) !important;
+  color: var(--badge-text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.badge.bg-primary {
+  background-color: var(--brand-color) !important;
+  color: white !important;
+}
+
+.badge.bg-secondary {
+  background-color: var(--badge-bg) !important;
+  color: var(--badge-text) !important;
+}
+
+/* Override Bootstrap progress bars */
+.progress {
+  background-color: var(--progress-bg) !important;
+}
+
+.progress-bar {
+  background-color: var(--progress-bar-bg) !important;
+}
+
+/* Override Bootstrap button colors */
+.btn-primary {
+  background-color: var(--brand-color) !important;
+  border-color: var(--brand-color) !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-color) !important;
+  border-color: var(--brand-color) !important;
+  opacity: 0.9;
+}
+
+.btn-outline-primary {
+  color: var(--brand-color) !important;
+  border-color: var(--brand-color) !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--brand-color) !important;
+  color: white !important;
+  border-color: var(--brand-color) !important;
+}
+
+.btn-outline-primary:focus {
+  background-color: var(--brand-color) !important;
+  color: white !important;
+  border-color: var(--brand-color) !important;
+  box-shadow: 0 0 0 0.2rem rgba(22, 35, 77, 0.25) !important;
+}
+
+.btn-outline-light {
+  color: var(--text-primary) !important;
+  border-color: var(--text-primary) !important;
+}
+
+.btn-outline-light:hover {
+  background-color: var(--text-primary) !important;
+  color: var(--bg-primary) !important;
 }
 
 /* Custom navbar styling */
@@ -30,8 +216,9 @@ h6 {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Hero image styling */
@@ -74,15 +261,17 @@ h6 {
 /* Section padding */
 .section {
   padding: 80px 0;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
 /* Striped sections - alternating backgrounds */
 main .section:nth-child(odd) {
-  background-color: whitesmoke;
+  background-color: var(--bg-secondary);
 }
 
 main .section:nth-child(even) {
-  background-color: white;
+  background-color: var(--bg-primary);
 }
 
 /* Ensure smooth transitions between sections */
@@ -92,40 +281,46 @@ main .section:nth-child(even) {
 
 /* Override hero section gradient for striped pattern */
 .hero-section {
-  background: whitesmoke !important;
-  color: #333 !important;
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
 }
 
 /* Ensure text is visible on light backgrounds */
 .hero-section h1,
 .hero-section h2,
 .hero-section p {
-  color: #333 !important;
+  color: var(--text-primary) !important;
 }
 
 .hero-section .btn-outline-light {
-  color: #333 !important;
-  border-color: #333 !important;
+  color: var(--text-primary) !important;
+  border-color: var(--text-primary) !important;
 }
 
 .hero-section .btn-outline-light:hover {
-  background-color: #333 !important;
-  color: white !important;
+  background-color: var(--text-primary) !important;
+  color: var(--bg-primary) !important;
 }
 
 /* Footer should have dark background */
 .footer {
-  background-color: #343a40 !important;
+  background-color: var(--footer-bg) !important;
+  color: var(--footer-text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Project cards hover effects */
 .project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px var(--shadow);
+  background-color: var(--hover-bg);
 }
 
 /* Skills section styling */
@@ -133,6 +328,11 @@ main .section:nth-child(even) {
   margin: 5px;
   padding: 10px 15px;
   font-size: 0.9rem;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* Contact form styling */
@@ -141,37 +341,148 @@ main .section:nth-child(even) {
   margin: 0 auto;
 }
 
+/* Form elements */
+.form-control {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: var(--bg-primary);
+  border-color: var(--brand-color);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.2rem rgba(22, 35, 77, 0.25);
+}
+
+.form-label {
+  color: var(--text-primary) !important;
+}
+
 /* Footer styling */
 .footer {
-  background-color: #343a40;
-  color: white;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   padding: 40px 0;
 }
 
 .social-links a {
-  color: white;
+  color: var(--footer-text);
   margin: 0 10px;
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #007bff;
+  color: var(--link-color);
 }
 
-/* Dark mode styles (optional) */
-.dark-mode {
-  background-color: #121212;
+/* Card styling */
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card-body {
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.card-title {
+  color: var(--text-primary) !important;
+}
+
+.card-text {
+  color: var(--text-secondary) !important;
+}
+
+/* Theme switcher styling */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher .dropdown-toggle {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-switcher .dropdown-toggle:hover,
+.theme-switcher .dropdown-toggle:focus {
+  background-color: var(--hover-bg);
+  color: var(--text-primary);
+  border-color: var(--brand-color);
+  transform: translateY(-1px);
+}
+
+.theme-switcher .dropdown-menu {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  box-shadow: 0 4px 12px var(--shadow);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 160px;
+}
+
+.theme-switcher .dropdown-item {
+  color: var(--text-primary);
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-switcher .dropdown-item:hover {
+  background-color: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.theme-switcher .dropdown-item.active {
+  background-color: var(--brand-color);
   color: white;
 }
 
+/* Responsive theme switcher */
+@media (max-width: 768px) {
+  .theme-switcher .dropdown-toggle {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .theme-switcher .dropdown-toggle {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Dark mode styles (legacy - now handled by CSS variables) */
+.dark-mode {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
 .dark-mode .card {
-  background-color: #1e1e1e;
-  border-color: #333;
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
 }
 
 .dark-mode .navbar {
-  background-color: #1e1e1e !important;
+  background-color: var(--navbar-bg) !important;
 }
 
 /* Custom button styles */
