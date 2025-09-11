@@ -302,12 +302,7 @@ main .section:nth-child(even) {
   color: var(--bg-primary) !important;
 }
 
-/* Footer should have dark background */
-.footer {
-  background-color: var(--footer-bg) !important;
-  color: var(--footer-text) !important;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+/* Footer should have dark background - moved to consolidated footer styling below */
 
 /* Project cards hover effects */
 .project-card {
@@ -363,9 +358,10 @@ main .section:nth-child(even) {
 
 /* Footer styling */
 .footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
+  background-color: var(--footer-bg) !important;
+  color: var(--footer-text) !important;
   padding: 40px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-links a {

@@ -40,7 +40,7 @@ const Footer = () => {
         <Row className="align-items-center">
           <Col lg={6} className="text-center text-lg-start mb-3 mb-lg-0">
             <h5 className="mb-2">Let's Connect</h5>
-            <p className="mb-0 text-light">
+            <p className="mb-0" style={{ color: "var(--footer-text)" }}>
               Feel free to reach out for collaborations or just a friendly
               hello!
             </p>
@@ -54,8 +54,9 @@ const Footer = () => {
                   href={link.url}
                   target={link.name !== "Email" ? "_blank" : "_self"}
                   rel="noopener noreferrer"
-                  className="text-white me-3"
+                  className="me-3"
                   style={{
+                    color: "var(--footer-text)",
                     fontSize: "1.5rem",
                     transition: "all 0.3s ease",
                   }}
@@ -68,14 +69,11 @@ const Footer = () => {
           </Col>
         </Row>
 
-        <hr
-          className="my-4"
-          style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
-        />
+        <hr className="my-4" style={{ borderColor: "var(--border-color)" }} />
 
         <Row className="align-items-center">
           <Col lg={6} className="text-center text-lg-start">
-            <p className="mb-0 text-light">
+            <p className="mb-0" style={{ color: "var(--footer-text)" }}>
               © {currentYear} Nurdin Abdinasir. All rights reserved.
             </p>
           </Col>
@@ -83,25 +81,26 @@ const Footer = () => {
           <Col lg={6} className="text-center text-lg-end">
             <button
               onClick={scrollToTop}
-              className="btn btn-outline-light btn-sm"
+              className="btn btn-sm"
               style={{
-                border: "none",
-                background: "rgba(255, 255, 255, 0.1)",
+                border: "1px solid var(--footer-text)",
+                background: "transparent",
+                color: "var(--footer-text)",
                 transition: "all 0.3s ease",
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = "rgba(255, 255, 255, 0.2)";
+                e.target.style.background = "var(--footer-text)";
+                e.target.style.color = "var(--footer-bg)";
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = "rgba(255, 255, 255, 0.1)";
+                e.target.style.background = "transparent";
+                e.target.style.color = "var(--footer-text)";
               }}
             >
               <i className="bi bi-arrow-up"></i> Back to top
             </button>
           </Col>
         </Row>
-
-       
       </Container>
     </footer>
   );
